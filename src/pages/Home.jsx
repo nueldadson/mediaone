@@ -6,6 +6,7 @@ import {
 	PreTestimonials,
 	Progressbar,
 	Testimonials,
+	ScrollingText,
 	Partners,
 } from "../components";
 

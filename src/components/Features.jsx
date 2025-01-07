@@ -1,6 +1,6 @@
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";
-import ScrollingText from "./Scrollingtext";
+import ScrollingText from "./ScrollingText";
 
 const Features = () => {
 	return (
