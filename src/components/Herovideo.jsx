@@ -29,11 +29,11 @@ const Herovideo = () => {
 					<div className="absolute -top-0 inset-0 flex items-center justify-center text-white z-10 text-center px-6 hero-caption">
 						{/* Headline */}
 						<div className="animation-element slide-down flex w-full items-center justify-center flex-row-reverse max-md:h-[100px] h-[200px]">
-							<h1 className="flex items-center justify-center max-sm:px-2 px-6 uppercase text-left text-xl sm:text-3xl md:text-5xl font-bold border-l-4 border-l-white border-solid h-[100%] ">
+							<h1 className="flex items-center justify-center max-sm:px-2 px-6 uppercase text-left text-2xl sm:text-4xl md:text-6xl font-bold border-l-4 border-l-white border-solid h-[100%] ">
 								Infinite
 								<br /> Possibilities
 							</h1>
-							<p className="ml24 max-sm:px-2 px-6 text-lg sm:text-2xl md:text-5xl flex items-center justify-center text-right h-full ">
+							<p className="ml24 max-sm:px-2 px-6 text-xl sm:text-3xl md:text-6xl flex items-center justify-center text-right h-full ">
 								One
 								<br />
 								Source
