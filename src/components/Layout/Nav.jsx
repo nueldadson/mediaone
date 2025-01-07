@@ -27,7 +27,7 @@ const Nav = ({ isOpen, toggle }) => {
 		<header
 			className={`fixed w-full h-20 flex items-center justify-between z-50 px-12 max-lg:px-16 max-md:px-10 transition-all duration-300 ${
 				isScrolled
-					? "bg-black text-white shadow-gray-400 shadow-lg"
+					? "bg-black text-white shadow-gray-400 shadow-md"
 					: "bg-black bg-opacity-0 text-white"
 			}`}
 		>
