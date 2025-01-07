@@ -9,6 +9,7 @@ import {
 	SidebarIcon,
 	LinkedinIcon,
 	InstagramIcon,
+	FacebookIcon,
 	TwitterIcon,
 } from "./Sidebarelements";
 import "./sidebar.css";
@@ -43,13 +44,16 @@ const Sidebar = ({ isOpen, toggle }) => {
 						</SidebarLink>
 					</SidebarMenu>
 					<SidebarIcon>
-						<a href="https://linkedin.com/company/the-dune-agency">
+						<a href="https://linkedin.com/company/cyberribs">
 							<LinkedinIcon />
 						</a>
-						<a href="https://instagram.com/theduneagency/">
+						<a href="https://www.instagram.com/mediaoneng">
 							<InstagramIcon />
 						</a>
-						<a href="https://twitter.com/theduneagency/">
+						<a href="https://www.facebook.com/mediaoneng">
+							<FacebookIcon />
+						</a>
+						<a href="https://www.twitter.com/Mediaoneng">
 							<TwitterIcon />
 						</a>
 					</SidebarIcon>

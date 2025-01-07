@@ -81,7 +81,7 @@ const ProgressBars = () => {
 					</div>
 					<div className="relative h-1 bg-gray-700 rounded">
 						<div
-							className="absolute top-0 left-0 h-full bg-gray-200 rounded transition-all duration-700 ease-in-out"
+							className="absolute top-0 left-0 h-full bg-gray-200 rounded transition-all duration-1000 ease-out"
 							style={{
 								width: `${progress[index].value}%`,
 							}}

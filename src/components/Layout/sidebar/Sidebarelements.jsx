@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
 	FaInstagram,
 	FaLinkedin,
+	FaFacebook,
 	FaTimes,
 	FaTwitter,
 	FaDiscord,
@@ -83,6 +84,10 @@ export const InstagramIcon = styled(FaInstagram)`
 `;
 
 export const TwitterIcon = styled(FaTwitter)`
+	color: #fff;
+	padding-left: 10px;
+`;
+export const FacebookIcon = styled(FaFacebook)`
 	color: #fff;
 	padding-left: 10px;
 `;

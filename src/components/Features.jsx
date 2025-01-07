@@ -1,8 +1,50 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import ScrollingText from "./ScrollingText";
 
 const Features = () => {
+	const [count, setCount] = useState(3); // Start from 3
+	const [isInView, setIsInView] = useState(false); // Tracks if the element is in the viewport
+	const countdownRef = useRef(null);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setIsInView(true); // Start countdown when in viewport
+				} else {
+					setIsInView(false); // Stop countdown when out of viewport
+					setCount(3); // Reset to initial state
+				}
+			},
+			{ threshold: 0.5 }, // Trigger when 50% of the element is visible
+		);
+
+		if (countdownRef.current) {
+			observer.observe(countdownRef.current);
+		}
+
+		return () => {
+			if (countdownRef.current) {
+				observer.unobserve(countdownRef.current);
+			}
+		};
+	}, []);
+
+	useEffect(() => {
+		if (!isInView) return;
+
+		const interval = setInterval(() => {
+			setCount((prevCount) => {
+				if (prevCount === "GO") return 3; // Restart from 3 after "GO"
+				if (prevCount === 1) return "GO"; // Show "GO" after 1
+				return prevCount - 1; // Decrement the number
+			});
+		}, 1000); // 1 second interval for each step
+
+		return () => clearInterval(interval); // Clear interval on component unmount
+	}, [isInView]);
+
 	return (
 		<section
 			id="aboutus"
@@ -14,7 +56,7 @@ const Features = () => {
 						<p className=" font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-8">
 							ABOUT <span className="text-[#ffc303]">US</span>
 						</p>
-						<p className=" text-center px-8 md:px-24 font-medium text-lg text-gray-100">
+						<p className=" text-center px-8 md:px-24 font-medium text-lg text-gray-100 mb-12">
 							Welcome to Mediaone, your leading full-service advertising agency.
 							As a communications powerhouse, we boast a rich history of
 							delivering exceptional advertising solutions. Our impressive track
@@ -39,6 +81,67 @@ const Features = () => {
 						</p>
 					</Fade>
 
+					<div
+						ref={countdownRef}
+						className="flex items-center justify-center py-12 text-white"
+					>
+						<div className="text-center">
+							{/* Countdown Number */}
+							<div className="text-9xl font-bold transition-all duration-700 ease-in-out">
+								{count}
+							</div>
+						</div>
+					</div>
+
+					<section className="text-white py-20">
+						{/* Section Title */}
+						<div className="text-center mb-16">
+							<h2 className="text-4xl md:text-5xl font-extrabold">
+								THE <span className="text-[#ffc303]">3-STEP</span> APPROACH
+							</h2>
+							<p className="text-gray-400 mt-4">Plan, Create, Amplify</p>
+						</div>
+
+						{/* Steps */}
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 md:px-20">
+							{/* Step 1 */}
+							<div className="text-center">
+								<p className="text-gray-400 uppercase font-semibold mb-2">
+									PLAN
+								</p>
+								<h3 className="text-7xl font-bold text-white mb-4">1</h3>
+								<p className="text-gray-400">
+									Collaborate with Mediaone to strategize a comprehensive
+									advertising plan tailored to your brand's needs and goals.
+								</p>
+							</div>
+
+							{/* Step 2 */}
+							<div className="text-center">
+								<p className="text-gray-400 uppercase font-semibold mb-2">
+									CREATE
+								</p>
+								<h3 className="text-7xl font-bold text-white mb-4">2</h3>
+								<p className="text-gray-400">
+									Leverage our creative team to craft captivating content,
+									campaigns, and visuals that resonate with your audience.
+								</p>
+							</div>
+
+							{/* Step 3 */}
+							<div className="text-center">
+								<p className="text-gray-400 uppercase font-semibold mb-2">
+									AMPLIFY
+								</p>
+								<h3 className="text-7xl font-bold text-white mb-4">3</h3>
+								<p className="text-gray-400">
+									Deploy across digital, print, and social platforms to maximize
+									reach and engagement, ensuring measurable results.
+								</p>
+							</div>
+						</div>
+					</section>
+
 					{/* <ScrollingText /> */}
 					<Slide direction="up" duration={500} className="">
 						{/* Section Heading */}
@@ -46,16 +149,13 @@ const Features = () => {
 							className=" text-center px-8 mt-16 mb-8 flex items-center justify-center"
 							id="services"
 						>
-							<p
-								className="text-xl md:text-lg bg-gray-50 py-4 px-6 rounded-md
-							 w-fit font-bold text-gray-600 hover:bg-[#ffc303]"
-							>
-								Why Choose Us?
+							<p className="font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-8 uppercase">
+								Why <span className="text-[#ffc303]">Choose</span> mediaone?
 							</p>
 						</div>
 					</Slide>
-					<div className="mt-4 px-8 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4">
-						<Slide direction="up" duration={800}>
+					<div className="mt-4 px-8 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4">
+						<Fade direction="in" duration={800}>
 							<div className="feature bg-[#ffc303] h-[100%] p-8 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
 								{/* Initial Icon Layer */}
 								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
@@ -83,7 +183,7 @@ const Features = () => {
 									</p>
 								</div>
 							</div>
-						</Slide>
+						</Fade>
 
 						<Slide direction="up" duration={700}>
 							<div className="feature bg-[#ffc303] h-[100%] p-8 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
