@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin|Raleway:300");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	transition: ease-in-out 0.3s;
+}
+
+@keyframes progress {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-10px);
+	}
+	60% {
+		transform: translateY(-5px);
+	}
+}
+
+/* --------------------------- /////////// I. GENERAL /////////// --------------------------- */
+/* -Color- */
+.colored {
+	color: #ffd012;
+}
+/* -Link Styling- */
+
+/* -Resets- */
+html,
+body {
+	color: #222;
+	line-height: 1.5rem; /* 24px */
+	max-width: 100%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+/* -Full width fluid container- *
+/* -Text Styling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Oswald, sans-serif !important;
+}
+p {
+	font-family: Oswald, sans-serif;
+	font-size: 0.9375rem; /* 15px */
+	padding: 5px 5px 5px 0;
+	margin: 0;
+	font-weight: 300;
+}
+li {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+}
+li p {
+	font-weight: bold;
+}
+.heading {
+	position: relative;
+	background: #fff;
+	text-align: center;
+}
+
+.carousel-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-slide {
+	transition: transform 0.7s ease-in-out;
+	display: flex;
+}
+
+.carousel-indicator {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 8px;
+}
+
+.carousel-indicator div {
+	width: 8px;
+	height: 8px;
+	background-color: #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.carousel-indicator div.active {
+	background-color: #ffd012;
+}
