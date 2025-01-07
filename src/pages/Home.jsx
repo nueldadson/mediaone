@@ -8,11 +8,13 @@ import {
 	Testimonials,
 	ScrollingText,
 	Partners,
+	PersistentLines,
 } from "../components";
 
 const Home = () => {
 	return (
 		<div>
+			<PersistentLines />
 			<Herovideo />
 			<Features />
 			<PreTestimonials />

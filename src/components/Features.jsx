@@ -268,7 +268,7 @@ const Features = () => {
 					</div>
 					<br />
 					<ScrollingText text=" &nbsp;Digital Media. &nbsp;&nbsp;Traditional Media. &nbsp;&nbsp;Branding. &nbsp;&nbsp;Public Relations. &nbsp;&nbsp;Event Management. &nbsp;&nbsp;Market Research.&nbsp;" />
-					<div className="mt-4 px-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4 justify-center">
+					<div className=" px-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4 justify-center">
 						<Fade direction="in" duration={500}>
 							<div className="feature bg-[#ffc303] h-[100%] p-8 lg:px-14 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
 								{/* Initial Icon Layer */}
