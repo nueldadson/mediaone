@@ -27,7 +27,7 @@ const ScrollingText = ({ text }) => {
 	return (
 		<div
 			ref={scrollContainerRef}
-			className="overflow-x-hidden h-[90px] whitespace-nowrap text-gray-500 text-5xl font-bold flex"
+			className="overflow-x-hidden h-[60px] whitespace-nowrap text-gray-500 text-5xl font-bold flex"
 		>
 			<div
 				className="flex-shrink-0"

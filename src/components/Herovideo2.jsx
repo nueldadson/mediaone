@@ -9,7 +9,7 @@ const Herovideo2 = () => {
 		<div id="footer" className="relative bg-[#f3f4f6]">
 			<Fade direction="in" duration={700}>
 				{/* Hero Unit */}
-				<div className=" relative overflow-hidden w-full h-[100vh] max-h-[1000px] bg-[#f3f4f6]">
+				<div className=" relative overflow-hidden w-full h-[200px] md:h-[500px] lg:h-[80vh] max-h-[1000px] bg-[#f3f4f6]">
 					{/* Video Background */}
 					<video
 						autoPlay

@@ -42,7 +42,7 @@ const Testimonials = () => {
 
 		const interval = setInterval(() => {
 			setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-		}, 10000);
+		}, 4000);
 
 		return () => clearInterval(interval);
 	}, [isPaused]);

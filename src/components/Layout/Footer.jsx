@@ -1,13 +1,6 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import {
-	FaPhoneAlt,
-	FaEnvelope,
-	FaMapMarkerAlt,
-	FaTwitter,
-	FaInstagram,
-	FaLinkedin,
-} from "react-icons/fa";
+import { hero } from "../../assets/images";
 
 const Footer = () => {
 	return (
@@ -67,11 +60,11 @@ const Footer = () => {
 			</div>
 
 			{/* Social Media and Logo */}
-			<div className="text-center mb-8">
+			<div className="text-center mb-4">
 				<h2 className="text-xl font-semibold mb-4">
 					Get Connected & Follow Us
 				</h2>
-				<div className="flex justify-center space-x-6 mb-6">
+				<div className="flex justify-center space-x-6">
 					<a
 						href="https://www.instagram.com/mediaoneng"
 						target="_blank"
@@ -108,7 +101,16 @@ const Footer = () => {
 						<i className="fab fa-google-plus text-2xl text-yellow-400 hover:text-yellow-500"></i>
 					</a>
 				</div>
-				<p className="font-bold text-2xl text-yellow-400">MEDIAONE</p>
+				<p
+					className="font-bold text-6xl md:text-9xl  bg-clip-text text-transparent animate-zoom"
+					style={{
+						backgroundImage: `url(${hero})`,
+						backgroundSize: "100% 100%",
+						backgroundPosition: "center",
+					}}
+				>
+					MEDIAONE
+				</p>
 			</div>
 
 			{/* Footer Copyright */}

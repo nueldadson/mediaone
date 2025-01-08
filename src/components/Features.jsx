@@ -56,7 +56,7 @@ const Features = () => {
 						<p className=" font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-8">
 							ABOUT <span className="text-[#ffc303]">US</span>
 						</p>
-						<p className=" text-center px-8 md:px-24 font-medium text-lg text-gray-100 mb-12">
+						<p className=" text-center px-8 md:px-24 text-md text-gray-200 mb-12">
 							Welcome to Mediaone, your leading full-service advertising agency.
 							As a communications powerhouse, we boast a rich history of
 							delivering exceptional advertising solutions. Our impressive track
@@ -80,7 +80,6 @@ const Features = () => {
 							of the competition.
 						</p>
 					</Fade>
-
 					<div
 						ref={countdownRef}
 						className="flex items-center justify-center py-12 text-white"
@@ -92,11 +91,10 @@ const Features = () => {
 							</div>
 						</div>
 					</div>
-
 					<section className="text-white py-20">
 						{/* Section Title */}
 						<div className="text-center mb-16">
-							<h2 className="text-4xl md:text-5xl font-extrabold">
+							<h2 className="text-3xl md:text-5xl font-extrabold">
 								THE <span className="text-[#ffc303]">3-STEP</span> APPROACH
 							</h2>
 							<p className="text-gray-400 mt-4">Plan, Create, Amplify</p>
@@ -130,9 +128,7 @@ const Features = () => {
 
 							{/* Step 3 */}
 							<div className="text-center">
-								<p className="text-gray-400 uppercase font-semibold mb-2">
-									AMPLIFY
-								</p>
+								<p className="text-gray-400 uppercase font-semibold">AMPLIFY</p>
 								<h3 className="text-7xl font-bold text-white mb-4">3</h3>
 								<p className="text-gray-400">
 									Deploy across digital, print, and social platforms to maximize
@@ -141,12 +137,11 @@ const Features = () => {
 							</div>
 						</div>
 					</section>
-
 					{/* <ScrollingText /> */}
 					<Slide direction="up" duration={500} className="">
 						{/* Section Heading */}
 						<div
-							className=" text-center px-8 mt-16 mb-8 flex items-center justify-center"
+							className=" text-center px-8 mb-4 flex items-center justify-center"
 							id="services"
 						>
 							<p className="font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-8 uppercase">
@@ -154,175 +149,168 @@ const Features = () => {
 							</p>
 						</div>
 					</Slide>
-					<div className="mt-4 px-8 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4">
-						<Fade direction="in" duration={800}>
-							<div className="feature bg-[#ffc303] h-[100%] p-8 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
-								{/* Initial Icon Layer */}
-								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
-									<i className="lnr lnr-screen text-[#181818] text-6xl font-extrabold"></i>
-									<p className="text-gray-900 font-extrabold text-2xl">
-										Digital Media
-									</p>
-								</div>
-								{/* Main Content Layer */}
-								<div className="relative z-0 group-hover:opacity-100 transition-transform duration-500 ease-in-out scale-100 group-hover:scale-105">
-									<i className="lnr lnr-screen text-black font-bold text-6xl mb-6 block mx-auto"></i>
-									<h3 className="text-lg font-semibold text-black mb-4">
-										Digital Media
-									</h3>
-									<p className="text-gray-900 font-semibold">
-										<ul type="1">
-											<li>Website Design &amp; Development</li>
-											<li>Search Engine Optimisation</li>
-											<li>Pay-Per-Click</li>
-											<li>Social Media Marketing</li>
-											<li>Email Marketing</li>
-											<li>Content Marketing</li>
-											<li>Influencer Marketing</li>
-										</ul>
-									</p>
+					<div className="mt-4 px-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4">
+						{/* 1) Traditional Media */}
+						<Fade direction="in" duration={700}>
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
+								<div className="card-container">
+									{/* Front Side */}
+									<div className="card-side card-front">
+										<i className="lnr lnr-film-play icon-style"></i>
+										<p className="front-text">Traditional Media</p>
+									</div>
+									{/* Back Side */}
+									<div className="card-side card-back">
+										<i className="lnr lnr-film-play icon-style"></i>
+										<h3 className="back-heading">Traditional Media</h3>
+										<p className="back-text">
+											<ol type="i">
+												<li>Print</li>
+												<li>Radio</li>
+												<li>Television</li>
+												<li>Outdoor</li>
+											</ol>
+										</p>
+									</div>
 								</div>
 							</div>
 						</Fade>
 
-						<Slide direction="up" duration={700}>
-							<div className="feature bg-[#ffc303] h-[100%] p-8 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
-								{/* Initial Icon Layer */}
-								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
-									<i className="lnr lnr-film-play text-[#181818] text-6xl font-extrabold"></i>
-									<p className="text-gray-900 font-extrabold text-2xl">
-										Traditional Media
-									</p>
-								</div>
-								{/* Main Content Layer */}
-								<div className="relative z-0 group-hover:opacity-100 transition-transform duration-500 ease-in-out scale-100 group-hover:scale-105">
-									<i className="lnr lnr-film-play text-black font-bold text-6xl mb-6 block mx-auto"></i>
-									<h3 className="text-lg font-semibold text-black mb-4">
-										Traditional Media
-									</h3>
-									<p className="text-gray-900 font-semibold">
-										<ol type="i">
-											<li>Print</li>
-											<li>Radio</li>
-											<li>Television</li>
-											<li>Outdoor</li>
-										</ol>
-									</p>
+						{/*in) Digital Media */}
+						<Fade direction="in" duration={700}>
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
+								<div className="card-container">
+									{/* Front Side */}
+									<div className="card-side card-front">
+										<i className="lnr lnr-screen icon-style"></i>
+										<p className="front-text">Digital Media</p>
+									</div>
+									{/* Back Side */}
+									<div className="card-side card-back">
+										<i className="lnr lnr-screen icon-style"></i>
+										<h3 className="back-heading">Digital Media</h3>
+										<p className="back-text">
+											<ul type="1">
+												<li>Website Design &amp; Development</li>
+												<li>Search Engine Optimisation</li>
+												<li>Pay-Per-Click</li>
+												<li>Social Media Marketing</li>
+												<li>Email Marketing</li>
+												<li>Content Marketing</li>
+												<li>Influencer Marketing</li>
+											</ul>
+										</p>
+									</div>
 								</div>
 							</div>
-						</Slide>
+						</Fade>
 
-						<Slide direction="up" duration={600}>
-							<div className="feature bg-[#ffc303] h-[100%] p-8 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
-								{/* Initial Icon Layer */}
-								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
-									<i className="lnr lnr-tag text-[#181818] text-6xl font-extrabold"></i>
-									<p className="text-gray-900 font-extrabold text-2xl">
-										Branding
-									</p>
-								</div>
-								{/* Main Content Layer */}
-								<div className="relative z-0 group-hover:opacity-100 transition-transform duration-500 ease-in-out scale-100 group-hover:scale-105">
-									<i className="lnr lnr-tag text-black font-bold text-6xl mb-6 block mx-auto"></i>
-									<h3 className="text-lg font-semibold text-black mb-4">
-										Branding
-									</h3>
-									<p className="text-gray-900 font-semibold">
-										<ol type="i">
-											<li>Graphics Design</li>
-											<li>Copywriting</li>
-											<li>Photography & Video Production</li>
-											<li>Printing Services</li>
-										</ol>
-									</p>
+						{/*in) Branding */}
+						<Fade direction="in" duration={700}>
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
+								<div className="card-container">
+									{/* Front Side */}
+									<div className="card-side card-front">
+										<i className="lnr lnr-tag icon-style"></i>
+										<p className="front-text">Branding</p>
+									</div>
+									{/* Back Side */}
+									<div className="card-side card-back">
+										<i className="lnr lnr-tag icon-style"></i>
+										<h3 className="back-heading">Branding</h3>
+										<p className="back-text">
+											<ol type="i">
+												<li>Graphics Design</li>
+												<li>Copywriting</li>
+												<li>Photography &amp; Video Production</li>
+												<li>Printing Services</li>
+											</ol>
+										</p>
+									</div>
 								</div>
 							</div>
-						</Slide>
+						</Fade>
 
-						<Slide direction="up" duration={500}>
-							<div className="feature bg-[#ffc303] h-[100%] p-8 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
-								{/* Initial Icon Layer */}
-								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
-									<i className="lnr lnr-bullhorn text-[#181818] text-6xl font-extrabold"></i>
-									<p className="text-gray-900 font-extrabold text-2xl">
-										Public Relations
-									</p>
-								</div>
-								{/* Main Content Layer */}
-								<div className="relative z-0 group-hover:opacity-100 transition-transform duration-500 ease-in-out scale-100 group-hover:scale-105">
-									<i className="lnr lnr-bullhorn text-black font-bold text-6xl mb-6 block mx-auto"></i>
-									<h3 className="text-lg font-semibold text-black mb-4">
-										Public Relations
-									</h3>
-									<p className="text-gray-900 font-semibold">
-										<ol type="">
-											<li>Media Relations</li>
-											<li>Content Marketing Services</li>
-											<li>Crisis Management</li>
-											<li>Press Releases</li>
-										</ol>
-									</p>
+						{/*in) Public Relations */}
+						<Fade direction="in" duration={700}>
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
+								<div className="card-container">
+									{/* Front Side */}
+									<div className="card-side card-front">
+										<i className="lnr lnr-bullhorn icon-style"></i>
+										<p className="front-text">Public Relations</p>
+									</div>
+									{/* Back Side */}
+									<div className="card-side card-back">
+										<i className="lnr lnr-bullhorn icon-style"></i>
+										<h3 className="back-heading">Public Relations</h3>
+										<p className="back-text">
+											<ol>
+												<li>Media Relations</li>
+												<li>Content Marketing Services</li>
+												<li>Crisis Management</li>
+												<li>Press Releases</li>
+											</ol>
+										</p>
+									</div>
 								</div>
 							</div>
-						</Slide>
+						</Fade>
+
+						{/*in) Event Management */}
+						<Fade direction="in" duration={700}>
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
+								<div className="card-container">
+									{/* Front Side */}
+									<div className="card-side card-front">
+										<i className="lnr lnr-calendar-full icon-style"></i>
+										<p className="front-text">Event Management</p>
+									</div>
+									{/* Back Side */}
+									<div className="card-side card-back">
+										<i className="lnr lnr-calendar-full icon-style "></i>
+										<h3 className="back-heading">Event Management</h3>
+										<p className="back-text">
+											<ol type="i">
+												<li>Corporate Events</li>
+												<li>Brand Activations</li>
+												<li>Product Launches</li>
+												<li>Award Ceremonies</li>
+											</ol>
+										</p>
+									</div>
+								</div>
+							</div>
+						</Fade>
+
+						{/*in) Market Research */}
+						<Fade direction="in" duration={700}>
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
+								<div className="card-container">
+									{/* Front Side */}
+									<div className="card-side card-front">
+										<i className="lnr lnr-chart-bars icon-style"></i>
+										<p className="front-text">Market Research</p>
+									</div>
+									{/* Back Side */}
+									<div className="card-side card-back">
+										<i className="lnr lnr-chart-bars icon-style"></i>
+										<h3 className="back-heading">Market Research</h3>
+										<p className="back-text">
+											<ol type="i">
+												<li>Consumer Behavior Analysis</li>
+												<li>Competitor Analysis</li>
+												<li>Brand Perception Studies</li>
+												<li>Market Trend Forecasting</li>
+											</ol>
+										</p>
+									</div>
+								</div>
+							</div>
+						</Fade>
 					</div>
 					<br />
 					<ScrollingText text=" &nbsp;Digital Media. &nbsp;&nbsp;Traditional Media. &nbsp;&nbsp;Branding. &nbsp;&nbsp;Public Relations. &nbsp;&nbsp;Event Management. &nbsp;&nbsp;Market Research.&nbsp;" />
-					<div className=" px-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4 justify-center">
-						<Fade direction="in" duration={500}>
-							<div className="feature bg-[#ffc303] h-[100%] p-8 lg:px-14 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
-								{/* Initial Icon Layer */}
-								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
-									<i className="lnr lnr-calendar-full text-[#181818] text-6xl font-extrabold"></i>
-									<p className="text-gray-900 font-extrabold text-2xl">
-										Event Management
-									</p>
-								</div>
-								{/* Main Content Layer */}
-								<div className="relative z-0 group-hover:opacity-100 transition-transform duration-500 ease-in-out scale-100 group-hover:scale-105">
-									<i className="lnr lnr-calendar-full text-black font-bold text-6xl mb-6 block mx-auto"></i>
-									<h3 className="text-lg font-semibold text-black mb-4">
-										Event Management
-									</h3>
-									<p className="text-gray-900 font-semibold">
-										<ol type="i">
-											<li>Corporate Events</li>
-											<li>Brand Activations</li>
-											<li>Product Launches</li>
-											<li>Award Ceremonies</li>
-										</ol>
-									</p>
-								</div>
-							</div>
-						</Fade>
-
-						<Fade direction="in" duration={600}>
-							<div className="feature bg-[#ffc303] h-[100%] p-8 lg:px-14 rounded-lg shadow-lg hover:shadow-xl transition mb-4 scale-95 relative group">
-								{/* Initial Icon Layer */}
-								<div className="absolute inset-0 flex rounded-lg items-center justify-center bg-gray-300 z-10 opacity-100 group-hover:opacity-0 transition-opacity duration-500 ease-in-out flex-col">
-									<i className="lnr lnr-chart-bars text-[#181818] text-6xl font-extrabold"></i>
-									<p className="text-gray-900 font-extrabold text-2xl">
-										Market Research
-									</p>
-								</div>
-								{/* Main Content Layer */}
-								<div className="relative z-0 group-hover:opacity-100 transition-transform duration-500 ease-in-out scale-100 group-hover:scale-105">
-									<i className="lnr lnr-chart-bars text-black font-bold text-6xl mb-6 block mx-auto"></i>
-									<h3 className="text-lg font-semibold text-black mb-4">
-										Market Research
-									</h3>
-									<p className="text-gray-900 font-semibold">
-										<ol type="i">
-											<li>Consumer Behavior Analysis</li>
-											<li>Competitor Analysis</li>
-											<li>Brand Perception Studies</li>
-											<li>Market Trend Forecasting</li>
-										</ol>
-									</p>
-								</div>
-							</div>
-						</Fade>
-					</div>
 				</div>
 			</div>
 		</section>

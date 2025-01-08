@@ -14,7 +14,7 @@ const PreTestimonials = () => {
 			}}
 		>
 			{/* Overlay */}
-			<div className="absolute inset-0 bg-black bg-opacity-45"></div>
+			<div className="absolute inset-0 bg-black bg-opacity-55"></div>
 
 			{/* Content */}
 			<div className="relative sm:px-6 max-md:px-16 md:px-44 z-10">
@@ -22,7 +22,7 @@ const PreTestimonials = () => {
 				<Slide duration={500} direction="up">
 					<h2 className="text-2xl md:text-3xl font-bold mb-4">
 						<span className="text-white font-bold text-6xl">
-							PASSION LED US HERE
+							PASSION <span className="text-[#ffc303]">LED</span> US HERE
 						</span>
 					</h2>
 				</Slide>

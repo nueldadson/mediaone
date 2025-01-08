@@ -23,7 +23,7 @@ const Herovideo = () => {
 					</video>
 
 					{/* Overlay */}
-					<div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 hero-overlay"></div>
+					<div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 hero-overlay"></div>
 
 					{/* Hero Caption */}
 					<div className="absolute -top-0 inset-0 flex items-center justify-center text-white z-10 text-center px-6 hero-caption">

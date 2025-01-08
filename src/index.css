@@ -110,3 +110,22 @@ li p {
 .carousel-indicator div.active {
 	background-color: #ffd012;
 }
+
+@keyframes zoom {
+	0% {
+		background-size: 100% 100%;
+		background-position: center;
+	}
+	50% {
+		background-size: 260% 260%;
+		background-position: center;
+	}
+	100% {
+		background-size: 100% 100%;
+		background-position: center;
+	}
+}
+
+.animate-zoom {
+	animation: zoom 12s infinite ease-in-out;
+}

@@ -31,7 +31,7 @@ const Partners = () => {
 					});
 				}
 			}
-		}, 1000); // Scroll every 1 second
+		}, 2000); // Scroll every 1 second
 
 		return () => clearInterval(interval); // Cleanup on unmount
 	}, []);
