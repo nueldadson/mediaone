@@ -1,5 +1,5 @@
 import React from "react";
-import { hero } from "../assets/images"; // Ensure the image path is correct
+import { hero2 } from "../assets/images"; // Ensure the image path is correct
 import { Slide } from "react-awesome-reveal";
 
 const PreTestimonials = () => {
@@ -7,7 +7,7 @@ const PreTestimonials = () => {
 		<div
 			className="relative py-[100px] w-full flex items-center justify-center text-center text-white"
 			style={{
-				backgroundImage: `url(${hero})`, // Correctly reference the image
+				backgroundImage: `url(${hero2})`, // Correctly reference the image
 				backgroundAttachment: "fixed", // Enables the parallax effect
 				backgroundSize: "cover",
 				backgroundPosition: "center",

@@ -36,8 +36,8 @@ const Features = () => {
 
 		const interval = setInterval(() => {
 			setCount((prevCount) => {
-				if (prevCount === "GO") return 3; // Restart from 3 after "GO"
-				if (prevCount === 1) return "GO"; // Show "GO" after 1
+				if (prevCount === "0") return 3; // Restart from 3 after "GO"
+				if (prevCount === 1) return "0"; // Show "GO" after 1
 				return prevCount - 1; // Decrement the number
 			});
 		}, 1000); // 1 second interval for each step
@@ -53,10 +53,10 @@ const Features = () => {
 			<div className=" w-full">
 				<div className="">
 					<Fade direction="in" duration={1000}>
-						<p className=" font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-8">
+						<p className=" font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-6">
 							ABOUT <span className="text-[#ffc303]">US</span>
 						</p>
-						<p className=" text-center px-8 md:px-24 text-md text-gray-200 mb-12">
+						<p className=" text-center px-8 md:px-24 text-sm tracking-widest text-gray-200 mb-12">
 							Welcome to Mediaone, your leading full-service advertising agency.
 							As a communications powerhouse, we boast a rich history of
 							delivering exceptional advertising solutions. Our impressive track
@@ -80,18 +80,30 @@ const Features = () => {
 							of the competition.
 						</p>
 					</Fade>
+					<div className="flex justify-center items-center w-full py-[20px]">
+						<div className="w-[0.1px] h-24 bg-gray-500 ml-[2px]"></div>
+					</div>
 					<div
 						ref={countdownRef}
-						className="flex items-center justify-center py-12 text-white"
+						className="flex items-center justify-center py-12 "
 					>
 						<div className="text-center">
+							<div className=" uppercase pb-12 tracking-widest text-gray-500 font-bold">
+								Ready
+							</div>
 							{/* Countdown Number */}
-							<div className="text-9xl font-bold transition-all duration-700 ease-in-out">
+							<div className="text-gray-300 text-9xl font-bold transition-all duration-700 ease-in-out">
 								{count}
+							</div>
+							<div className=" uppercase pt-12 tracking-widest text-gray-500 font-bold">
+								Go
 							</div>
 						</div>
 					</div>
-					<section className="text-white py-20">
+					<div className="flex justify-center items-center w-full py-[20px]">
+						<div className="w-[0.1px] h-24 bg-gray-500 ml-[2px]"></div>
+					</div>
+					<section className="text-white py-12">
 						{/* Section Title */}
 						<div className="text-center mb-16">
 							<h2 className="text-3xl md:text-5xl font-extrabold">
@@ -141,14 +153,15 @@ const Features = () => {
 					<Slide direction="up" duration={500} className="">
 						{/* Section Heading */}
 						<div
-							className=" text-center px-8 mb-4 flex items-center justify-center"
+							className=" text-center px-8 mb-4 mt-14 flex items-center justify-center"
 							id="services"
 						>
 							<p className="font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl mb-8 uppercase">
-								Why <span className="text-[#ffc303]">Choose</span> mediaone?
+								<span className="text-[#ffc303]">our</span> Services
 							</p>
 						</div>
 					</Slide>
+					<ScrollingText text=" &nbsp;Digital Media. &nbsp;&nbsp;Traditional Media. &nbsp;&nbsp;Branding. &nbsp;&nbsp;Public Relations. &nbsp;&nbsp;Event Management. &nbsp;&nbsp;Market Research.&nbsp;" />
 					<div className="mt-4 px-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4">
 						{/* 1) Traditional Media */}
 						<Fade direction="in" duration={700}>

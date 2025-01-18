@@ -1,5 +1,7 @@
 import React from "react";
 import bgVideo from "../assets/videos/bgvid.mp4";
+import bgVideoWebm from "../assets/videos/bgvid.webm"; // Added webm format
+import bgVideoOgg from "../assets/videos/bgvid.ogg"; // Added ogg format
 import bgPoster from "../assets/images/hero.jpeg";
 import { Logowhite } from "../assets/images";
 import { Fade, Slide } from "react-awesome-reveal";
@@ -9,7 +11,7 @@ const Herovideo = () => {
 		<div id="hero-section" className="relative bg-[#f3f4f6]">
 			<Fade direction="in" duration={700}>
 				{/* Hero Unit */}
-				<div className=" relative overflow-hidden w-full min-h-[100vh] bg-[#f3f4f6]">
+				<div className="relative overflow-hidden w-full min-h-[100vh] bg-[#f3f4f6]">
 					{/* Video Background */}
 					<video
 						autoPlay
@@ -18,8 +20,13 @@ const Herovideo = () => {
 						poster={bgPoster}
 						id="bgvid"
 						className="absolute top-0 left-0 w-full h-full object-cover"
+						playsInline
 					>
 						<source src={bgVideo} type="video/mp4" />
+						<source src={bgVideoWebm} type="video/webm" />{" "}
+						{/* Added webm source */}
+						<source src={bgVideoOgg} type="video/ogg" />{" "}
+						{/* Added ogg source */}
 					</video>
 
 					{/* Overlay */}
@@ -33,7 +40,7 @@ const Herovideo = () => {
 								Infinite
 								<br /> Possibilities
 							</h1>
-							<p className="ml24 max-sm:px-2 px-6 text-xl sm:text-3xl md:text-6xl flex items-center justify-center text-right h-full ">
+							<p className="ml24 max-sm:px-2 px-6 text-xl sm:text-2xl md:text-5xl flex items-center justify-center text-right h-full ">
 								One
 								<br />
 								Source

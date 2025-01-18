@@ -59,9 +59,12 @@ const Partners = () => {
 		<div className="w-full py-8 bg-gradient-to-t from-black to-[#181818] flex items-center justify-center flex-col">
 			{/* Slide animation for the heading */}
 			<Slide direction="right" duration={500}>
-				<h2 className="text-center text-gray-400 text-2xl font-semibold mb-12 mt-4">
-					Trusted by The World's Best
+				<h2 className="text-center uppercase text-white text-3xl tracking-wide font-semibold mt-4">
+					Brand <span className="text-[#ffc303]">that trust</span> US
 				</h2>
+				<p className="text-gray-400 text-center w-full mb-12 uppercase">
+					one client at a time
+				</p>
 			</Slide>
 
 			{/* Carousel */}

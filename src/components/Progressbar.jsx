@@ -69,6 +69,10 @@ const ProgressBars = () => {
 			id="progress-bars-container"
 			className="py-14 px-14 sm:px-40 lg:px-60 bg-black text-gray-200"
 		>
+			<p className="font-extrabold text-center text-gray-300 lg:text-6xl text-3xl sm:text-4xl uppercase">
+				Why <span className="text-[#ffc303]">Choose</span> mediaone?
+			</p>
+			<p className="text-gray-400 text-center w-full mb-8 uppercase">decision drive result</p>
 			{bars.map((bar, index) => (
 				<div key={index} className="mb-8 progress-bar">
 					<div className="flex justify-between items-center mb-1">
@@ -79,7 +83,7 @@ const ProgressBars = () => {
 							{progress[index].value}%
 						</span>
 					</div>
-					<div className="relative h-1 bg-gray-700 rounded">
+					<div className="relative h-[1.3px]  bg-gray-700 rounded">
 						<div
 							className="absolute top-0 left-0 h-full bg-gray-200 rounded transition-all duration-1000 ease-out"
 							style={{

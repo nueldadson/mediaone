@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { hero } from "../assets/images"; // Ensure the image path is correct
+import { hero2 } from "../assets/images"; // Ensure the image path is correct
 import { Slide } from "react-awesome-reveal";
 
 const testimonials = [
@@ -54,7 +54,7 @@ const Testimonials = () => {
 		<div
 			className="relative py-[60px] w-full flex items-center justify-center text-center text-white"
 			style={{
-				backgroundImage: `url(${hero})`,
+				backgroundImage: `url(${hero2})`,
 				backgroundAttachment: "fixed",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
@@ -72,9 +72,12 @@ const Testimonials = () => {
 				{/* Testimonial Title */}
 				<Slide duration={500} direction="up">
 					<h2 className="text-2xl md:text-3xl font-bold mb-4">
-						<span className="text-yellow-500">
-							"What Our Clients Say About Us"
+						<span className="uppercase">
+							"Our client <span className="text-[#ffc303]">experience</span>"
 						</span>
+						<p className="text-gray-400 uppercase">
+							- don't just take our word for it -
+						</p>
 					</h2>
 				</Slide>
 				{/* Testimonial Text */}

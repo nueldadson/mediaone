@@ -1,13 +1,15 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import { hero } from "../../assets/images";
+import { hero2 } from "../../assets/images";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Footer = () => {
 	return (
 		<footer className="bg-black text-gray-200 py-12 px-6 sm:px-12">
 			{/* Contact Information */}
 			<div className="text-center mb-8">
-				<p className="text-lg font-semibold">
+				<p className="text-lg font-sem1ibold">
 					40 Shobowale Ogba-Acme Lagos &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
 					+234-9030010234 &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;{" "}
 					<a
@@ -26,19 +28,19 @@ const Footer = () => {
 					<input
 						type="text"
 						placeholder="Your Name"
-						className="w-full max-w-md mx-auto px-4 py-2 bg-gray-600 font-semibold rounded-md outline-none"
+						className="w-full max-w-3xl mx-auto px-4 py-2 bg-gray-200 font-semibold rounded-md outline-none"
 					/>
 					<input
 						type="email"
 						placeholder="Your Email"
-						className="w-full max-w-md mx-auto px-4 py-2 bg-gray-600 text-white rounded-md outline-none"
+						className="w-full max-w-3xl mx-auto px-4 py-2 bg-gray-200 text-white rounded-md outline-none"
 					/>
 					<textarea
 						placeholder="Your Message"
 						rows="4"
-						className="w-full max-w-md mx-auto px-4 py-2 bg-gray-600 text-white rounded-md outline-none"
+						className="w-full max-w-3xl mx-auto px-4 py-2 bg-gray-200 text-white rounded-md outline-none"
 					></textarea>
-					<button className="w-full max-w-sm bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-6 rounded-md">
+					<button className="w-full max-w-xl bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-6 rounded-md">
 						Send Message
 					</button>
 				</div>
@@ -46,7 +48,7 @@ const Footer = () => {
 
 			{/* Map Section */}
 			<div className="text-center mb-12 rounded-lg">
-				<iframe
+				{/* <iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.193294783788!2d3.3320493750411333!3d6.622895393371345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91637096d02f%3A0x87c7eb56e6a4fc41!2s40%20Shobowale%20St%2C%20Ijaiye%2C%20Lagos%20102212%2C%20Lagos!5e0!3m2!1sen!2sng!4v1736256905554!5m2!1sen!2sng"
 					width="100%"
 					height="300"
@@ -56,7 +58,23 @@ const Footer = () => {
 					referrerPolicy="no-referrer-when-downgrade"
 					title="Google Map"
 					className="rounded-lg"
-				></iframe>
+				></iframe> */}
+				<MapContainer
+					center={[6.622895, 3.332049]}
+					zoom={15}
+					style={{ height: "300px", width: "100%", borderRadius: "8px" }}
+				>
+					{/* Dark Theme Tile Layer */}
+					<TileLayer
+						url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+						attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+					/>
+
+					{/* Marker for the Address */}
+					<Marker position={[6.622895, 3.332049]}>
+						<Popup>40 Shobowale St, Ijaiye, Lagos</Popup>
+					</Marker>
+				</MapContainer>
 			</div>
 
 			{/* Social Media and Logo */}
@@ -104,7 +122,7 @@ const Footer = () => {
 				<p
 					className="font-bold text-6xl md:text-9xl  bg-clip-text text-transparent animate-zoom"
 					style={{
-						backgroundImage: `url(${hero})`,
+						backgroundImage: `url(${hero2})`,
 						backgroundSize: "100% 100%",
 						backgroundPosition: "center",
 					}}
