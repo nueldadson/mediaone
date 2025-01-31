@@ -42,7 +42,7 @@
 	/* Let Tailwind handle responsive padding, 
      but you can still use a base padding here if you want: */
 	padding: 4rem;
-	border-radius: 0.8rem;
+	border-radius: 3rem;
 	background-color: #ffc303;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	transform-style: preserve-3d; /* Enables 3D transformations */
@@ -64,7 +64,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border-radius: 0.8rem;
+	border-radius: 3rem;
 	backface-visibility: hidden; /* Hide the backface when rotated */
 }
 

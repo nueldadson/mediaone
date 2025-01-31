@@ -164,20 +164,59 @@ const Features = () => {
 					<ScrollingText text=" &nbsp;Digital Media. &nbsp;&nbsp;Traditional Media. &nbsp;&nbsp;Branding. &nbsp;&nbsp;Public Relations. &nbsp;&nbsp;Event Management. &nbsp;&nbsp;Market Research.&nbsp;" />
 					<div className="mt-4 px-8 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-4">
 						{/* 1) Traditional Media */}
+						{/* =========================
+    1) Traditional Media (UNCHANGED)
+========================= */}
 						<Fade direction="in" duration={700}>
-							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
-								<div className="card-container">
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6 ">
+								<div className="card-container p-0 ">
 									{/* Front Side */}
-									<div className="card-side card-front">
-										<i className="lnr lnr-film-play icon-style"></i>
-										<p className="front-text">Traditional Media</p>
+									<div
+										className="card-side card-front bg-cover bg-center relative w-[100%] "
+										style={{
+											position: "relative",
+											isolation: "isolate", // Ensures pseudo-element does not interfere with child elements
+										}}
+									>
+										<div
+											className="absolute inset-0  rounded-[inherit]"
+											style={{
+												backgroundImage: `url("https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+												filter: "grayscale(100%)", // Grayscale only affects the background
+												content: '""',
+												position: "absolute",
+												top: 0,
+												left: 0,
+												right: 0,
+												bottom: 0,
+												zIndex: -1, // Places the pseudo-element behind the content
+											}}
+										></div>
+										<div
+											className="absolute z-20 inset-0 bg-[#ffc303] rounded-[inherit]"
+											style={{
+												opacity: 0.5, // Adjust this value (0 to 1) to change the overlay opacity
+												mixBlendMode: "multip", // Ensures a true overlay effect
+											}}
+										></div>
+										{/* <i className="lnr lnr-film-play icon-style"></i> */}
+										<p className="front-text text-5xl z-30 text-white">
+											Traditional <br />
+											<span className="text-[#ffc303]">Media</span>
+										</p>
 									</div>
+
 									{/* Back Side */}
 									<div className="card-side card-back">
 										<i className="lnr lnr-film-play icon-style"></i>
 										<h3 className="back-heading">Traditional Media</h3>
-										<p className="back-text">
-											<ol type="i">
+										<p className="back-text ">
+											<ol
+												type="i"
+												className="text-white font-extrabold flex flex-col gap-2"
+											>
 												<li>Print</li>
 												<li>Radio</li>
 												<li>Television</li>
@@ -189,15 +228,52 @@ const Features = () => {
 							</div>
 						</Fade>
 
-						{/*in) Digital Media */}
+						{/* =========================
+    2) Digital Media (UPDATED)
+========================= */}
 						<Fade direction="in" duration={700}>
-							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
-								<div className="card-container">
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6 ">
+								<div className="card-container p-0 ">
 									{/* Front Side */}
-									<div className="card-side card-front">
-										<i className="lnr lnr-screen icon-style"></i>
-										<p className="front-text">Digital Media</p>
+									<div
+										className="card-side card-front bg-cover bg-center relative w-[100%]"
+										style={{
+											position: "relative",
+											isolation: "isolate",
+										}}
+									>
+										{/* Grayscale background image */}
+										<div
+											className="absolute inset-0  rounded-[inherit]"
+											style={{
+												backgroundImage: `url("https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+												filter: "grayscale(100%)",
+												content: '""',
+												position: "absolute",
+												top: 0,
+												left: 0,
+												right: 0,
+												bottom: 0,
+												zIndex: -1,
+											}}
+										></div>
+										{/* Overlay */}
+										<div
+											className="absolute z-20 inset-0 bg-white rounded-[inherit]"
+											style={{
+												opacity: 0.5,
+												mixBlendMode: "multiply",
+											}}
+										></div>
+										{/* Front text */}
+										<p className="front-text text-5xl z-30 text-white">
+											Digital <br />
+											<span className="text-[#ffc303]">Media</span>
+										</p>
 									</div>
+
 									{/* Back Side */}
 									<div className="card-side card-back">
 										<i className="lnr lnr-screen icon-style"></i>
@@ -218,15 +294,56 @@ const Features = () => {
 							</div>
 						</Fade>
 
-						{/*in) Branding */}
+						{/* =========================
+    3) Branding (UPDATED)
+========================= */}
 						<Fade direction="in" duration={700}>
-							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
-								<div className="card-container">
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6 ">
+								<div className="card-container p-0 ">
 									{/* Front Side */}
-									<div className="card-side card-front">
-										<i className="lnr lnr-tag icon-style"></i>
-										<p className="front-text">Branding</p>
+									<div
+										className="card-side card-front bg-cover bg-center relative w-[100%]"
+										style={{
+											position: "relative",
+											isolation: "isolate",
+										}}
+									>
+										{/* Grayscale background image */}
+										<div
+											className="absolute inset-0  rounded-[inherit]"
+											style={{
+												backgroundImage: `url("https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+												filter: "grayscale(100%)",
+												content: '""',
+												position: "absolute",
+												top: 0,
+												left: 0,
+												right: 0,
+												bottom: 0,
+												zIndex: -1,
+											}}
+										></div>
+										{/* Overlay */}
+										<div
+											className="absolute z-20 inset-0 bg-white rounded-[inherit]"
+											style={{
+												opacity: 0.5,
+												mixBlendMode: "multiply",
+											}}
+										></div>
+										{/* Front text */}
+										<p className="front-text text-5xl z-30 text-white">
+											Branding <br />
+											<span className="text-[#ffc303]">&nbsp;</span>
+											{/* If you want the word 'Branding' on two lines:
+               Branding <br />
+               <span className="text-[#ffc303]">Services</span> 
+               for example */}
+										</p>
 									</div>
+
 									{/* Back Side */}
 									<div className="card-side card-back">
 										<i className="lnr lnr-tag icon-style"></i>
@@ -244,15 +361,52 @@ const Features = () => {
 							</div>
 						</Fade>
 
-						{/*in) Public Relations */}
+						{/* =========================
+    4) Public Relations (UPDATED)
+========================= */}
 						<Fade direction="in" duration={700}>
-							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
-								<div className="card-container">
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6 ">
+								<div className="card-container p-0 ">
 									{/* Front Side */}
-									<div className="card-side card-front">
-										<i className="lnr lnr-bullhorn icon-style"></i>
-										<p className="front-text">Public Relations</p>
+									<div
+										className="card-side card-front bg-cover bg-center relative w-[100%]"
+										style={{
+											position: "relative",
+											isolation: "isolate",
+										}}
+									>
+										{/* Grayscale background image */}
+										<div
+											className="absolute inset-0  rounded-[inherit]"
+											style={{
+												backgroundImage: `url("https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+												filter: "grayscale(100%)",
+												content: '""',
+												position: "absolute",
+												top: 0,
+												left: 0,
+												right: 0,
+												bottom: 0,
+												zIndex: -1,
+											}}
+										></div>
+										{/* Overlay */}
+										<div
+											className="absolute z-20 inset-0 bg-[#ffc303] rounded-[inherit]"
+											style={{
+												opacity: 0.5,
+												mixBlendMode: "multiply",
+											}}
+										></div>
+										{/* Front text */}
+										<p className="front-text text-5xl z-30 text-white">
+											Public <br />
+											<span className="text-[#ffc303]">Relations</span>
+										</p>
 									</div>
+
 									{/* Back Side */}
 									<div className="card-side card-back">
 										<i className="lnr lnr-bullhorn icon-style"></i>
@@ -270,18 +424,55 @@ const Features = () => {
 							</div>
 						</Fade>
 
-						{/*in) Event Management */}
+						{/* =========================
+    5) Event Management (UPDATED)
+========================= */}
 						<Fade direction="in" duration={700}>
-							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
-								<div className="card-container">
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6 ">
+								<div className="card-container p-0 ">
 									{/* Front Side */}
-									<div className="card-side card-front">
-										<i className="lnr lnr-calendar-full icon-style"></i>
-										<p className="front-text">Event Management</p>
+									<div
+										className="card-side card-front bg-cover bg-center relative w-[100%]"
+										style={{
+											position: "relative",
+											isolation: "isolate",
+										}}
+									>
+										{/* Grayscale background image */}
+										<div
+											className="absolute inset-0  rounded-[inherit]"
+											style={{
+												backgroundImage: `url("https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+												filter: "grayscale(100%)",
+												content: '""',
+												position: "absolute",
+												top: 0,
+												left: 0,
+												right: 0,
+												bottom: 0,
+												zIndex: -1,
+											}}
+										></div>
+										{/* Overlay */}
+										<div
+											className="absolute z-20 inset-0 bg-[#ffc303] rounded-[inherit]"
+											style={{
+												opacity: 0.5,
+												mixBlendMode: "multiply",
+											}}
+										></div>
+										{/* Front text */}
+										<p className="front-text text-5xl z-30 text-white">
+											Event <br />
+											<span className="text-[#ffc303]">Management</span>
+										</p>
 									</div>
+
 									{/* Back Side */}
 									<div className="card-side card-back">
-										<i className="lnr lnr-calendar-full icon-style "></i>
+										<i className="lnr lnr-calendar-full icon-style"></i>
 										<h3 className="back-heading">Event Management</h3>
 										<p className="back-text">
 											<ol type="i">
@@ -296,15 +487,52 @@ const Features = () => {
 							</div>
 						</Fade>
 
-						{/*in) Market Research */}
+						{/* =========================
+    6) Market Research (UPDATED)
+========================= */}
 						<Fade direction="in" duration={700}>
-							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6">
-								<div className="card-container">
+							<div className="card-wrapper py-2 md:py-6 px-2 md:px-6 ">
+								<div className="card-container p-0 ">
 									{/* Front Side */}
-									<div className="card-side card-front">
-										<i className="lnr lnr-chart-bars icon-style"></i>
-										<p className="front-text">Market Research</p>
+									<div
+										className="card-side card-front bg-cover bg-center relative w-[100%]"
+										style={{
+											position: "relative",
+											isolation: "isolate",
+										}}
+									>
+										{/* Grayscale background image */}
+										<div
+											className="absolute inset-0  rounded-[inherit]"
+											style={{
+												backgroundImage: `url("https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg")`,
+												backgroundSize: "cover",
+												backgroundPosition: "center",
+												filter: "grayscale(100%)",
+												content: '""',
+												position: "absolute",
+												top: 0,
+												left: 0,
+												right: 0,
+												bottom: 0,
+												zIndex: -1,
+											}}
+										></div>
+										{/* Overlay */}
+										<div
+											className="absolute z-20 inset-0 bg-white rounded-[inherit]"
+											style={{
+												opacity: 0.5,
+												mixBlendMode: "multiply",
+											}}
+										></div>
+										{/* Front text */}
+										<p className="front-text text-5xl z-30 text-white">
+											Market <br />
+											<span className="text-[#ffc303]">Research</span>
+										</p>
 									</div>
+
 									{/* Back Side */}
 									<div className="card-side card-back">
 										<i className="lnr lnr-chart-bars icon-style"></i>

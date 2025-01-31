@@ -8,6 +8,10 @@ import partner3 from "./brand3.png";
 import partner4 from "./brand4.png";
 import partner5 from "./brand5.png";
 
+// External image URL
+const externalImage =
+	"https://live.staticflickr.com/65535/54294683116_7637be81ae_m.jpg";
+
 export {
 	Logo,
 	Logowhite,
@@ -18,4 +22,5 @@ export {
 	partner3,
 	partner4,
 	partner5,
+	externalImage,
 };
