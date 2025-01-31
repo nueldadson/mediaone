@@ -261,10 +261,10 @@ const Features = () => {
 										></div>
 										{/* Overlay */}
 										<div
-											className="absolute z-20 inset-0 bg-white rounded-[inherit]"
+											className="absolute z-20 inset-0 bg-[white] rounded-[inherit]"
 											style={{
 												opacity: 0.5,
-												mixBlendMode: "multiply",
+												mixBlendMode: "multip",
 											}}
 										></div>
 										{/* Front text */}
@@ -330,7 +330,7 @@ const Features = () => {
 											className="absolute z-20 inset-0 bg-white rounded-[inherit]"
 											style={{
 												opacity: 0.5,
-												mixBlendMode: "multiply",
+												mixBlendMode: "multip",
 											}}
 										></div>
 										{/* Front text */}
@@ -397,7 +397,7 @@ const Features = () => {
 											className="absolute z-20 inset-0 bg-[#ffc303] rounded-[inherit]"
 											style={{
 												opacity: 0.5,
-												mixBlendMode: "multiply",
+												mixBlendMode: "multip",
 											}}
 										></div>
 										{/* Front text */}
@@ -460,7 +460,7 @@ const Features = () => {
 											className="absolute z-20 inset-0 bg-[#ffc303] rounded-[inherit]"
 											style={{
 												opacity: 0.5,
-												mixBlendMode: "multiply",
+												mixBlendMode: "multip",
 											}}
 										></div>
 										{/* Front text */}
@@ -523,7 +523,7 @@ const Features = () => {
 											className="absolute z-20 inset-0 bg-white rounded-[inherit]"
 											style={{
 												opacity: 0.5,
-												mixBlendMode: "multiply",
+												mixBlendMode: "multip",
 											}}
 										></div>
 										{/* Front text */}
